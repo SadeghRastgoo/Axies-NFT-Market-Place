@@ -1,0 +1,27 @@
+:root {
+  --primary-text-color: #fdfdfd;
+  --bg-color: #14141f;
+  --primary-color: #4e3fee;
+  --primary-color-2: #5142fb;
+  --gray-color: #adadb0;
+  --icon-bg-color: #343444;
+  --bg-color-2: #0d0d12;
+
+  --line-color: #242431;
+}
+
+// Font color
+.fc-primary-2 {
+  color: var(--primary-color-2);
+}
+.fc-gray {
+  color: var(--gray-color);
+}
+.fc-white {
+  color: var(--primary-text-color);
+}
+
+// BG color
+.bg-black {
+  background: #030303;
+}

@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Axies NFT Market Place</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
+    <link rel="stylesheet" href="css/formalize.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container pos-relative">
+        <a href="#"
+          ><img
+            class="logo img-rendering"
+            src="assets/img/01_header/logo_dark.png"
+            alt="logo"
+        /></a>
+        <nav class="nav">
+          <ul class="text-base font-semi-bold">
+            <li>
+              <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">Explore <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">Activity <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">Community <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">Contact <i class="fa-solid fa-angle-down"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__functionalities pos-relative">
+          <div class="functionalities__search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.5 17.5L13.875 13.875"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <button class="btn btn--primary shadow-1 text-sm font-semi-bold z-1">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Wallet connect</span>
+          </button>
+          <div class="header__theme-switcher pos-relative z-1">
+            <div class="icon-container pointer flex-center">
+              <img src="assets/img/01_header/sun.png" alt="light-mode icon" />
+            </div>
+            <div class="icon-container pointer flex-center">
+              <img src="assets/img/01_header/moon-2.png" alt="dark-mode icon" />
+            </div>
+          </div>
+          <svg
+            class="blur-pattern-1 pos-absolute"
+            width="258"
+            height="230"
+            viewBox="0 0 258 230"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_f_45_2157)">
+              <ellipse cx="129" cy="115" rx="36" ry="22" fill="#5142FB" />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_45_2157"
+                x="0"
+                y="0"
+                width="258"
+                height="230"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="46.5"
+                  result="effect1_foregroundBlur_45_2157"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container pos-relative">
+        <div class="hero__main">
+          <h2 class="text-5xl">
+            Discover, and collect <br />
+            extraordinary <br />
+            <span class="monster-word fc-primary-2">Monster</span> NFTs
+          </h2>
+          <p id="typeit" class="text-base fc-gray"></p>
+          <div class="buttons-container">
+            <button class="btn btn--primary shadow-1 text-sm font-semi-bold">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Explore</span>
+            </button>
+            <button class="btn btn--primary shadow-1 text-sm font-semi-bold">
+              <i class="fa-brands fa-unity"></i>
+              <span>Create</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero__pic">
+          <img
+            class="hero__img img-rendering"
+            src="assets/img/02_hero/hero-img.svg"
+            alt="hero image"
+          />
+        </div>
+        <a href="#features"><div class="icon-scroll"></div></a>
+      </div>
+    </section>
+    <section id="features" class="features container my-16">
+      <div class="features__feature text-center">
+        <div class="feature__icon flex-center">
+          <i class="fa-solid fa-wallet text-xl"></i>
+        </div>
+        <h4 class="feature__title text-xl">Set Up Your Wallet</h4>
+        <p class="feature__paragraph text-sm fc-gray line-height-1_6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+          posuere in vestibulum volutpat. Ut pharetra morbi sit.
+        </p>
+      </div>
+      <div class="features__feature text-center">
+        <div class="feature__icon flex-center">
+          <i class="fa-solid fa-table-cells-large text-xl"></i>
+        </div>
+        <h4 class="feature__title text-xl">Create Your Collection</h4>
+        <p class="feature__paragraph text-sm fc-gray line-height-1_6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+          posuere in vestibulum vestibulum volutpat. Ut pharetra morbi sit.
+        </p>
+      </div>
+      <div class="features__feature text-center">
+        <div class="feature__icon flex-center">
+          <i class="fa-solid fa-image text-xl"></i>
+        </div>
+        <h4 class="feature__title text-xl">Add Your NFTs</h4>
+        <p class="feature__paragraph text-sm fc-gray line-height-1_6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+          posuere in vestibulum volutpat. Ut pharetra morbi.
+        </p>
+      </div>
+      <div class="features__feature text-center">
+        <div class="feature__icon flex-center">
+          <i class="fa-solid fa-bookmark text-xl"></i>
+        </div>
+        <h4 class="feature__title text-xl">List Them For Sale</h4>
+        <p class="feature__paragraph text-sm fc-gray line-height-1_6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+          posuere in vestibulum volutpat. Ut pharetra morbi sit.
+        </p>
+      </div>
+    </section>
+    <section
+      id="live-auctions"
+      class="auctions section-structure bg-black py-6 my-10"
+    >
+      <div class="section-header container">
+        <h2 class="text-3xl font-bold">Live Auctions</h2>
+        <a
+          href="#"
+          class="section-header__explore text-sm font-normal pos-relative"
+          >Explore More</a
+        >
+      </div>
+      <div id="glide" class="glide">
+        <div class="glide__track pb-2" data-glide-el="track">
+          <div class="auctions__cards glide__slides">
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-43.gif"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Nova Auroras”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-5.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Diego Velázquez
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1"
+                >
+                  BSC
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">22.00 ETH</span>
+                    <span class="price__USD fc-gray text-sm"> = $29.750</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">780</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-10.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Mike Halloween Yodelers”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-2.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Pablo Picasso
+                    </p>
+                  </div>
+                </div>
+                <div class="creator-tag flex-center bs-tag text-xs font-semi-bold shadow-1">
+                  BS
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">7.00 ETH </span
+                    ><span class="price__USD fc-gray text-sm"> = $42.500</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">283</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-31.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Elite Fur Dog Race Club”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-6.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">Frida Kahlo</p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1"
+                >
+                  BSC
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">5.25 ETH </span
+                    ><span class="price__USD fc-gray text-sm"> = $20.109</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">335</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-11.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Blizz Blizzard”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-3.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">Gala Dali</p>
+                  </div>
+                </div>
+                <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+                  SB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">3.03 ETH </span
+                    ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">87</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-21.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Koalas in Love”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-5.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Vincent van Gogh
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center scb-tag text-xs font-semi-bold shadow-1"
+                >
+                  SCB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">37.37 ETH</span>
+                    <span class="fc-gray text-sm price__USD"> = $81.070</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">799</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-40.gif"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Enthusiastic Elephants”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-22.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">Joan Miró</p>
+                  </div>
+                </div>
+                <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+                  SB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">23.80 ETH</span>
+                    <span class="fc-gray text-sm price__USD"> = $51.000</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">157</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img src="assets/img/03_Live Auctions/card-item8.jpg" alt="" />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">
+                “Hamlet Contemplates Yorick’s Memories”
+              </h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-1.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Salvador Dali
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1"
+                >
+                  BSC
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">4.89 ETH</span
+                    ><span class="fc-gray text-sm price__USD"> = $12.246</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">100</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-32.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Krypto Queen”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-9.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">Luis Buñuel</p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1"
+                >
+                  BSC
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">0.97 ETH</span
+                    ><span class="fc-gray text-sm price__USD"> = $2.000</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">34</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-41.gif"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Gears of Dungeon”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-7.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">Rembrandt</p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center scb-tag text-xs font-semi-bold shadow-1"
+                >
+                  SCB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">1.00 ETH</span
+                    ><span class="fc-gray text-sm price__USD"> = $5.001</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">17</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-30.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Sluggish Sloths”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-8.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Hieronymus Bosch
+                    </p>
+                  </div>
+                </div>
+                <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+                  SB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">3.80 ETH</span
+                    ><span class="fc-gray text-sm price__USD"> = $8.343</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">45</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-42.gif"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“Lion Police Dept”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-9.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Antoni Gaudí
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="creator-tag flex-center scb-tag text-xs font-semi-bold shadow-1"
+                >
+                  SCB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">10.00 ETH</span>
+                    <span class="fc-gray text-sm price__USD"> = $14.220</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">507</span>
+                </div>
+              </div>
+            </div>
+            <div class="card glide__slide">
+              <div class="card__img pos-relative shadow-3">
+                <img
+                  src="assets/img/03_Live Auctions/image-box-33.jpg"
+                  alt=""
+                />
+                <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+                  <p
+                    class="place-bid__txt text-sm font-semi-bold line-height-0"
+                  >
+                    <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                    &nbsp;Place Bid
+                  </p>
+                  <div class="place-bid__checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path
+                        fill="transparent"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class="card__timer pos-absolute shadow-1 flex-center">
+                  <i class="fa-solid fa-fire-flame-curved"></i
+                  ><span
+                    class="card__timer--txt text-sm font-semi-bold line-height-0"
+                    >5 : 23 : 22 : 08</span
+                  >
+                </div>
+              </div>
+              <h3 class="card__title font-bold">“The Binary Girl”</h3>
+              <div class="card__creator">
+                <div class="creator__bio">
+                  <img
+                    class="bio__avatar shadow-1"
+                    src="assets/img/04_Top Seller/avt-5.jpg"
+                    alt=""
+                  />
+                  <div class="bio__name">
+                    <span class="fc-gray text-xs">Creator</span>
+                    <p class="text-sm font-medium line-height-0">
+                      Paul Cézanne
+                    </p>
+                  </div>
+                </div>
+                <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+                  SB
+                </div>
+              </div>
+              <div class="card__price">
+                <div class="price__bid">
+                  <span class="fc-gray text-xs">Current Bid</span>
+                  <p class="text-lg font-semi-bold">
+                    <span class="price__ETH">40.15 ETH</span>
+                    <span class="fc-gray text-sm price__USD"> = $58.555</span>
+                  </p>
+                </div>
+                <div
+                  class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+                >
+                  <div class="heart pos-absolute"></div>
+                  <span class="pos-absolute">1101</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left flex-center" data-glide-dir="<">
+            <i class="fa-solid fa-caret-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right flex-center" data-glide-dir=">">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+          <button class="glide__bullet" data-glide-dir="=5"></button>
+          <button class="glide__bullet" data-glide-dir="=6"></button>
+          <button class="glide__bullet" data-glide-dir="=7"></button>
+          <button class="glide__bullet" data-glide-dir="=8"></button>
+        </div>
+      </div>
+    </section>
+    <section id="collection" class="collections section-structure container">
+      <div class="section-header w-100 container">
+        <h2 class="text-3xl font-bold">Popular Collection</h2>
+        <a
+          href="#"
+          class="section-header__explore text-sm font-normal pos-relative"
+          >Explore More</a
+        >
+      </div>
+      <div class="collection__cards pb-4">
+        <div class="coll-card shadow-3">
+          <div class="coll-card__imgs pos-relative">
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box1/collection-item-2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box1/collection-item-bottom-4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box1/collection-item-top-1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box1/collection-item-top-2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box1/collection-item-top-3.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="coll-card__details">
+            <div class="coll-card__avatar pos-relative">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-5.jpg"
+                alt=""
+              />
+              <svg
+                class="coll-card__verified-badge pos-absolute"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                  fill="#5142FB"
+                />
+                <path
+                  d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="coll-card__txts">
+              <h5 class="text-base font-semi-bold">Creative Art Collection</h5>
+              <p class="text-xs fc-gray line-height-0">
+                Created by
+                <span class="font-semi-bold fc-white"> Relph Garraway</span>
+              </p>
+            </div>
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">123</span>
+            </div>
+          </div>
+        </div>
+        <div class="coll-card shadow-3">
+          <div class="coll-card__imgs pos-relative">
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box2/img-collection23.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box2/img-collection11.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box2/img-collection10.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box2/img-collection24.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box2/img-collection30.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="coll-card__details">
+            <div class="coll-card__avatar pos-relative">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-8.jpg"
+                alt=""
+              />
+              <svg
+                class="coll-card__verified-badge pos-absolute"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                  fill="#5142FB"
+                />
+                <path
+                  d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="coll-card__txts">
+              <h5 class="text-base font-semi-bold">Dreamy Imaginations</h5>
+              <p class="text-xs fc-gray line-height-0">
+                Created by
+                <span class="font-semi-bold fc-white"> Leonardo da Vinci</span>
+              </p>
+            </div>
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">410</span>
+            </div>
+          </div>
+        </div>
+        <div class="coll-card shadow-3">
+          <div class="coll-card__imgs pos-relative">
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box3/img-collection17.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box3/img-collection30.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box3/img-collection18.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box3/img-collection25.jpg"
+                alt=""
+              />
+            </div>
+            <div class="coll-card-imgs__img shadow-1">
+              <img
+                src="assets/img/06_popular_collection/box3/img-collection12.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="coll-card__details">
+            <div class="coll-card__avatar pos-relative">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-1.jpg"
+                alt=""
+              />
+              <svg
+                class="coll-card__verified-badge pos-absolute"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                  fill="#5142FB"
+                />
+                <path
+                  d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="coll-card__txts">
+              <h5 class="text-base font-semi-bold">Mountain of Clouds</h5>
+              <p class="text-xs fc-gray line-height-0">
+                Created by
+                <span class="font-semi-bold fc-white"> Michelangelo</span>
+              </p>
+            </div>
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">399</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sellers section-structure container my-6">
+      <div class="section-header container w-100">
+        <h2 class="text-3xl font-bold">Top Seller</h2>
+      </div>
+      <div class="sellers__cards">
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-21.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Crispin Berry</h4>
+            <span class="fc-gray font-semi-bold text-base">214.2 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-20.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Anil Evelin</h4>
+            <span class="fc-gray font-semi-bold text-base">590.0 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-22.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Teofilo Salwa</h4>
+            <span class="fc-gray font-semi-bold text-base">318.1 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-24.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Juozapas Davion</h4>
+            <span class="fc-gray font-semi-bold text-base">752.5 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-23.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Rambert Rosa</h4>
+            <span class="fc-gray font-semi-bold text-base">97.9 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-6.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Vishnu Gruffudd</h4>
+            <span class="fc-gray font-semi-bold text-base">514.0 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-2.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Kyrilu Tor</h4>
+            <span class="fc-gray font-semi-bold text-base">200.7 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-3.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Sigurður Finnley</h4>
+            <span class="fc-gray font-semi-bold text-base">475.7 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-4.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Abessalom Stine</h4>
+            <span class="fc-gray font-semi-bold text-base">103.3 ETH</span>
+          </div>
+        </div>
+        <div class="seller-card">
+          <div class="seller-card__avatar pos-relative">
+            <img
+              class="bio__avatar shadow-1"
+              src="assets/img/04_Top Seller/avt-8.jpg"
+              alt=""
+            />
+            <svg
+              class="seller-card__verified-badge pos-absolute"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z"
+                fill="#5142FB"
+              />
+              <path
+                d="M7.0568 11.8625L4.1318 8.81174C3.95607 8.62846 3.95607 8.33128 4.1318 8.14798L4.76818 7.48422C4.94391 7.30091 5.22885 7.30091 5.40458 7.48422L7.375 9.53935L11.5954 5.13746C11.7712 4.95418 12.0561 4.95418 12.2318 5.13746L12.8682 5.80123C13.0439 5.98451 13.0439 6.28169 12.8682 6.46499L7.6932 11.8625C7.51745 12.0458 7.23253 12.0458 7.0568 11.8625Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="seller-card__bio">
+            <h4 class="text-lg bold">Mar Bernhard</h4>
+            <span class="fc-gray font-semi-bold text-base">52.1 ETH</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="picks container section-structure my-10">
+      <div class="section-header w-100 container">
+        <h2 class="text-3xl font-bold">Today's Picks</h2>
+        <a
+          href="#"
+          class="section-header__explore text-sm font-normal pos-relative"
+          >Explore More</a
+        >
+      </div>
+      <div class="picks__categories">
+        <button class="btn btn--secondary btn--sm text-xs font-semi-bold">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 7H7V16H10V7Z"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 7H14V12H17V7Z"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Category</span>
+        </button>
+        <button class="btn btn--secondary btn--sm text-xs font-semi-bold">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 4V18.6667M14.3333 6.66667H9.33333C8.71449 6.66667 8.121 6.9125 7.68342 7.35008C7.24583 7.78767 7 8.38116 7 9C7 9.61884 7.24583 10.2123 7.68342 10.6499C8.121 11.0875 8.71449 11.3333 9.33333 11.3333H12.6667C13.2855 11.3333 13.879 11.5792 14.3166 12.0168C14.7542 12.4543 15 13.0478 15 13.6667C15 14.2855 14.7542 14.879 14.3166 15.3166C13.879 15.7542 13.2855 16 12.6667 16H7"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="11" cy="11" r="10.5" stroke="white" />
+          </svg>
+          <span>Price range</span>
+        </button>
+        <button class="btn btn--secondary btn--sm text-xs font-semi-bold">
+          <i class="fa-solid fa-bolt-lightning"></i>
+          <span>Sale type</span>
+        </button>
+        <button class="btn btn--secondary btn--sm text-xs font-semi-bold">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 15.9999V7.9999C20.9996 7.64918 20.9071 7.30471 20.7315 7.00106C20.556 6.69742 20.3037 6.44526 20 6.2699L13 2.2699C12.696 2.09437 12.3511 2.00195 12 2.00195C11.6489 2.00195 11.304 2.09437 11 2.2699L4 6.2699C3.69626 6.44526 3.44398 6.69742 3.26846 7.00106C3.09294 7.30471 3.00036 7.64918 3 7.9999V15.9999C3.00036 16.3506 3.09294 16.6951 3.26846 16.9987C3.44398 17.3024 3.69626 17.5545 4 17.7299L11 21.7299C11.304 21.9054 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9054 13 21.7299L20 17.7299C20.3037 17.5545 20.556 17.3024 20.7315 16.9987C20.9071 16.6951 20.9996 16.3506 21 15.9999Z"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.27 6.95996L12 12.01L20.73 6.95996"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 22.08V12"
+              stroke="#E8E8E8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Blockcahin</span>
+        </button>
+        <button class="btn btn--secondary btn--sm text-xs font-semi-bold">
+          <i class="fa-solid fa-align-center"></i>
+          <span>Sort by: Recently Added</span>
+        </button>
+      </div>
+      <div class="picks__cards">
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">507</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item-3.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Lion Police Dept”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-20.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Antoni Gaudí</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center scb-tag text-xs font-semi-bold shadow-1">
+              SCB
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">10.00 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">87</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item-2.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Blizz Blizzard”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-6.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Gala Dali</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+              SB
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">3.03 ETH </span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">34</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item-7.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Krypto Queen”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-24.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Luis Buñuel</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center scb-tag text-xs font-semi-bold shadow-1">
+              SCB
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">0.97 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">45</span>
+            </div>
+            <img src="assets/img/03_Live Auctions/image-box-30.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Sluggish Sloths”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-9.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">
+                  Hieronymus Bosch
+                </p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1">
+              BSC
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">3.80 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">1101</span>
+            </div>
+            <img src="assets/img/03_Live Auctions/image-box-33.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“The Binary Girl”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-3.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Paul Cézanne</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+              SB
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">40.15 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">17</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item-4.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Gears of Dungeon”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-8.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Rembrandt</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center bs-tag text-xs font-semi-bold shadow-1">
+              BS
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">1.00 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">100</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item-9.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">
+            “Hamlet Contemplates Yorick’s Memories”
+          </h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-23.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Salvador Dali</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center bsc-tag text-xs font-semi-bold shadow-1">
+              BSC
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">4.89 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img pos-relative shadow-3">
+            <div
+              class="like-tag flex-center text-xs font-medium noselect pointer pos-relative shadow-1 pos-absolute"
+            >
+              <div class="heart pos-absolute"></div>
+              <span class="pos-absolute">799</span>
+            </div>
+            <img src="assets/img/05_today_picks/card-item8.jpg" alt="" />
+            <button class="card__place-bid flex-centers pos-absolute shadow-1 pointer">
+              <p class="place-bid__txt text-sm font-semi-bold line-height-0">
+                <i class="fa-solid fa-bag-shopping fc-primary-2"></i>
+                &nbsp;Place Bid
+              </p>
+              <div class="place-bid__checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <h3 class="card__title font-bold">“Enthusiastic Elephants”</h3>
+          <div class="card__creator">
+            <div class="creator__bio">
+              <img
+                class="bio__avatar shadow-1"
+                src="assets/img/04_Top Seller/avt-1.jpg"
+                alt=""
+              />
+              <div class="bio__name">
+                <span class="fc-gray text-xs">Creator</span>
+                <p class="text-sm font-medium line-height-0">Joan Miró</p>
+              </div>
+            </div>
+            <div class="creator-tag flex-center sb-tag text-xs font-semi-bold shadow-1">
+              SB
+            </div>
+          </div>
+          <div class="card__price">
+            <div class="price__bid">
+              <span class="fc-gray text-xs">Current Bid</span>
+              <p class="text-lg font-semi-bold">
+                <span class="price__ETH">23.80 ETH</span
+                ><span class="price__USD fc-gray text-sm"> = $11.000</span>
+              </p>
+            </div>
+            <a href="#">
+              <div class="card__history text-sm fc-white font-semi-bold">
+                <i class="fa-solid fa-rotate"></i> View History
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+      <button class="btn btn--tertiary text-sm font-semi-bold my-auto">
+        <span>Load More</span>
+      </button>
+    </section>
+    <footer class="footer py-10">
+      <div class="container">
+        <div class="footer__col">
+          <a href="#"
+            ><img
+              class="img-rendering"
+              src="assets/img/01_header/logo_dark.png"
+              alt="logo"
+          /></a>
+          <p class="text-sm fc-gray line-height-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non
+            adipiscing consectetur phasellus nunc nunc vel.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-lg">My Account</h4>
+          <ul class="footer__links text-sm fc-gray font-medium">
+            <li><a href="#">Authors</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-lg">Resources</h4>
+          <ul class="footer__links text-sm fc-gray font-medium">
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Live Autctions</a></li>
+            <li><a href="#">Item Details</a></li>
+            <li><a href="#">Activity</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-lg">Company</h4>
+          <ul class="footer__links text-sm fc-gray font-medium">
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-lg">Subscribe Us</h4>
+          <div class="subscribe-input">
+            <input
+              class="subscribe-input__input font-medium"
+              type="email"
+              name="email"
+              placeholder="info@yourgmail.com"
+            />
+            <button class="subscribe-input__btn pointer text-lg">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="socials mt-1_5">
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <i class="fa-brands fa-twitter text-lg"></i></div
+            ></a>
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <i class="fa-brands fa-facebook text-lg"></i></div
+            ></a>
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <svg 
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.6992 3.85159L16.0586 16.3047C15.8594 17.1836 15.3398 17.4024 14.6016 16.9883L10.5781 14.0235L8.63672 15.8906C8.42188 16.1055 8.24219 16.2852 7.82813 16.2852L8.11719 12.1875L15.5742 5.44924C15.8984 5.16018 15.5039 5.00002 15.0703 5.28909L5.85157 11.0938L1.88282 9.85159C1.01953 9.58205 1.00391 8.9883 2.0625 8.57424L17.5859 2.59377C18.3047 2.32424 18.9336 2.75393 18.6992 3.85159Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <i class="fa-brands fa-youtube text-lg"></i></div
+            ></a>
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <i class="fa-brands fa-instagram text-lg"></i></div
+            ></a>
+            <a href="#"
+              ><div class="social-icon flex-center">
+                <i class="fa-brands fa-discord text-lg"></i></div
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="scrolltop flex-center shadow-1 hidden"><svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.0625 8.78125L8.5 2.21875L1.9375 8.78125" stroke="#5142FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </div>
+
+    <script src="node_modules/typeit/dist/index.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new TypeIt("#typeit", {})
+          .type("Welcome to America's Most Trusted Cryptocurrency.", {
+            delay: 400,
+          })
+          .delete(50)
+          .type(
+            "Marketplace for Monster Character Collections Non Fungible Token NFTs"
+          )
+          .move(null, { to: "START", instant: true, delay: 300 })
+          .type("The Greatest ")
+          .move(null, { to: "END", instant: true, delay: 300 })
+          .break({ delay: 500 })
+          .type(' on the <span class="place">Internet</span>', { delay: 400 })
+          .delete(".place", { delay: 800, instant: true })
+          .type('<em><strong class="font-semibold">Planet...</strong></em>', {
+            speed: 100,
+          })
+          .go();
+      });
+    </script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+      new Glide("#glide", {
+        type: "slider",
+        autoplay: 2900,
+        bound: "focusAt",
+        gap: 20,
+        dragThreshold: 80,
+        perView: 5,
+        breakpoints: {
+          800: {
+            perView: 4,
+          },
+          600: {
+            perView: 2,
+          },
+          350: {
+            perView: 1,
+          },
+        },
+      }).mount();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

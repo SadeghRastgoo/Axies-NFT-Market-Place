@@ -1,0 +1,99 @@
+// --- Position ---
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+
+// --- Z-index ---
+.z-1 {
+  z-index: 1;
+}
+.z-9 {
+  z-index: 9;
+}
+
+// --- Margin ---
+.my-10 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.my-6 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.mt-1_5 {
+  margin-top: 1.5rem;
+}
+.my-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// --- Padding ---
+.py-10 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.pb-4 {
+  padding-bottom: 4rem;
+}
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+// --- Shadow ---
+.shadow-1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.shadow-2 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.shadow-3 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px,
+    rgba(0, 0, 0, 0.15) 0px 7px 13px -3px, rgba(0, 0, 0, 0.1) 0px -3px 0px inset;
+}
+
+// --- Width ---
+.w-100 {
+  width: 100%;
+}
+
+// --- *** ---
+.img-rendering {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
