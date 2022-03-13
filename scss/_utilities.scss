@@ -91,6 +91,9 @@
 .hidden {
   visibility: hidden;
 }
+.d-none {
+  display: none !important;
+}
 
 .flex-center {
   display: flex;

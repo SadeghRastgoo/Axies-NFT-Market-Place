@@ -11,7 +11,6 @@
   border-style: solid;
   border-color: var(--primary-text-color);
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 0.75rem;
   padding: 1.5rem 3.6rem 1.4rem;
@@ -19,6 +18,11 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
+  transition: transform 0.3s;
+
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 .btn--sm {
@@ -37,11 +41,11 @@
   }
 }
 .btn--secondary {
-  border-color: #606067;
+  border-color: var(--primary-color-2);
   transition: background-color 0.5s, box-shadow 0.75s;
 
   &:hover {
-    background-color: #606067;
+    background-color: var(--primary-color-2);
     box-shadow: rgba(96, 96, 103, 0.2) 0px 2px 24px,
       rgba(96, 96, 103, 0.2) 0px 4px 56px, rgba(96, 96, 103, 0.1) 0px 6px 80px;
   }
@@ -67,13 +71,11 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-// Refactored
 .buttons-container {
   display: flex;
   gap: 2rem;
 }
 
-// Refactored
 .card {
   display: flex;
   flex-direction: column;
@@ -149,7 +151,7 @@
     }
 
     .place-bid--active {
-      background: var(--primary-color-2);
+      background: var(--primary-color);
       color: #fff;
     }
 
@@ -181,7 +183,7 @@
       border-radius: 1.3rem;
 
       i {
-        color: var(--primary-color-2);
+        color: var(--primary-color);
       }
     }
   }
@@ -298,7 +300,6 @@
   }
 }
 
-// Refactored
 .collection__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -394,7 +395,6 @@
   }
 }
 
-// Refactored
 .seller-card {
   display: flex;
   align-items: center;
@@ -442,10 +442,19 @@
   width: 20px;
   height: 35px;
   margin-left: -20px;
-  bottom: 0%;
+  bottom: -15%;
   margin-top: -35px;
   box-shadow: inset 0 0 0 1px #fff;
   border-radius: 25px;
+
+  @media (max-width: 1150px) {
+    left: 80%;
+    bottom: 0.5%;
+  }
+  @media (max-width: 500px) {
+    left: 100%;
+    bottom: 0.5%;
+  }
 }
 .icon-scroll:before {
   content: "";

@@ -2,17 +2,73 @@
   --primary-text-color: #fdfdfd;
   --bg-color: #14141f;
   --primary-color: #4e3fee;
-  --primary-color-2: #5142fb;
+  // --primary-color-2: #5142fb;
   --gray-color: #adadb0;
   --icon-bg-color: #343444;
   --bg-color-2: #0d0d12;
-
   --line-color: #242431;
+  --primary-color-2: #606067;
+  --bg-black: #030303;
+
+  --nav-color-1: #2c2c45;
 }
 
-// Font color
-.fc-primary-2 {
-  color: var(--primary-color-2);
+.light-mode-state {
+  --bg-color: #fdfdfd !important;
+  --primary-text-color: #14141f !important;
+  --gray-color: #919191 !important;
+  --icon-bg-color: #fdfdfd !important;
+  --bg-color-2: #9d9d9d !important;
+  --line-color: #bfbfec !important;
+  --primary-color-2: #d8d8dc !important;
+  --bg-black: #f3f3f3 !important;
+  --nav-color-1: #f1f0f0;
+
+  .theme-light {
+    fill: var(--primary-text-color) !important;
+  }
+
+  .btn--primary:hover {
+    color: #fff;
+  }
+  .btn--tertiary:hover {
+    color: #fff;
+  }
+
+  .feature__icon {
+    color: var(--bg-color);
+  }
+
+  .footer {
+    h4.text-lg {
+      color: #fff !important;
+    }
+    background: #161616 !important;
+    .social-icon svg path {
+      fill: #000 !important;
+    }
+  }
+
+  .card {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .like-tag {
+      background: var(--primary-text-color);
+      color: #fff;
+    }
+    .place-bid--active {
+      background: #14141f !important;
+    }
+    .place-bid__checkbox {
+      box-shadow: rgba(255, 255, 255, 0.5) 0 0 12px -2px !important;
+    }
+  }
+}
+
+// --- Font color ---
+.fc-primary {
+  color: var(--primary-color);
 }
 .fc-gray {
   color: var(--gray-color);
@@ -21,7 +77,7 @@
   color: var(--primary-text-color);
 }
 
-// BG color
+// --- Background color ---
 .bg-black {
-  background: #030303;
+  background: var(--bg-black);
 }

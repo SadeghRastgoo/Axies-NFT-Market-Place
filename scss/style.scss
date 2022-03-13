@@ -2,6 +2,7 @@
 @import "component";
 @import "typography";
 @import "utilities";
+@import "animation";
 
 html {
   box-sizing: border-box;
@@ -27,6 +28,75 @@ ul {
   padding: 0;
 }
 
+.blur-bg {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+.searchbar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: red;
+  z-index: 999;
+  background: #2e3034;
+  border: 1px solid #3c3f40;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .searchbar__row {
+    gap: 2rem;
+    display: flex;
+    color: #bebec0;
+  }
+  .row-2 {
+    justify-content: space-between;
+    div {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+  .searchbar__kbd {
+    border-radius: 4px;
+    background: linear-gradient(
+      to bottom right,
+      rgb(90, 89, 92),
+      rgb(60, 60, 60)
+    );
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 27px;
+    height: 27px;
+  }
+  .kbd--bg {
+    width: 35px;
+  }
+
+  .searchbar__icon {
+    transform: scale(1.1);
+  }
+  .searchbar__input {
+    background: transparent;
+    border: none;
+    flex-grow: 1;
+    color: #bebec0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
 .header {
   border-bottom: 2px solid #292933;
   padding: 0.75rem 0 0.5rem;
@@ -35,18 +105,75 @@ ul {
     display: flex;
     align-items: center;
     gap: 6rem;
+    background: var(--bg-color);
+
+    @media (max-width: 1255px) {
+      gap: 3rem;
+
+      .header__functionalities {
+        gap: 1.5rem;
+      }
+    }
+    @media (max-width: 1160px) {
+      .header__functionalities .btn {
+        display: none;
+      }
+      .header__functionalities {
+        justify-content: initial;
+        flex-grow: 0;
+      }
+    }
   }
 
   .nav {
-    width: 100%;
     min-width: 40rem;
     max-width: 60rem;
     padding-top: 0.5rem;
 
+    @media (max-width: 901px) {
+      display: none;
+    }
+
     ul {
       display: flex;
-      justify-content: space-between;
-      gap: 1.25rem;
+      gap: 1.5rem;
+      @media (max-width: 1350px) {
+        gap: 0;
+      }
+
+      li {
+        position: relative;
+        float: left;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: var(--nav-color-1);
+          ul {
+            display: initial;
+          }
+        }
+
+        ul {
+          border-radius: 5px;
+          position: absolute;
+          left: 0;
+          width: 200px;
+          display: none;
+          background: var(--nav-color-1);
+
+          li {
+            width: 100%;
+            &:hover {
+              background: #45426b;
+            }
+          }
+        }
+
+        a {
+          padding: 15px 10px;
+          display: block;
+        }
+      }
 
       li i.fa-solid {
         font-size: 0.9rem;
@@ -71,6 +198,10 @@ ul {
     display: flex;
     gap: 1.5rem;
     margin-left: auto;
+
+    .theme-light {
+      fill: #fff;
+    }
   }
 
   .blur-pattern-1 {
@@ -78,6 +209,91 @@ ul {
     top: -12rem;
     transform: scale(1.35, 1.3);
   }
+}
+#menu-bar {
+  display: none;
+}
+#menu-bar:checked ~ .nav {
+  display: initial;
+}
+.menu-bar__label {
+  display: none;
+  min-width: 3.7rem;
+
+  i {
+    padding-right: 1px;
+    padding-top: 1px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-bar__label {
+    display: flex;
+    order: 9;
+  }
+
+  .header .container {
+    gap: initial !important;
+    justify-content: space-between;
+  }
+  .header__functionalities {
+    gap: initial !important;
+    flex-grow: initial !important;
+    margin-right: 1.5rem;
+
+    .btn {
+      display: none !important;
+    }
+    .functionalities__search {
+      display: none !important;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    min-width: initial !important;
+    border-radius: 1rem;
+
+    ul {
+      flex-direction: column;
+    }
+    ul li {
+      width: 100%;
+    }
+    ul li ul {
+      position: relative !important;
+      z-index: 99;
+    }
+  }
+}
+
+.sticky-nav {
+  .container {
+    position: fixed;
+    width: 92.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+    padding: 0.75rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px,
+        rgba(0, 0, 0, 0.15) 0px 2px 8px, rgba(0, 0, 0, 0.15) 0px 4px 16px,
+        rgba(0, 0, 0, 0.15) 0px 8px 35px, rgba(0, 0, 0, 0.15) 0px 16px 64px,
+        rgba(0, 0, 0, 0.15) 0px 32px 128px;
+    }
+  }
+}
+.sticky-nav + section {
+  padding-top: 7.5rem;
 }
 
 .hero {
@@ -132,7 +348,6 @@ ul {
   }
 }
 
-// Refactored
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
@@ -201,7 +416,6 @@ ul {
   }
 }
 
-// Refactored
 .section-structure {
   display: flex;
   flex-direction: column;
@@ -220,7 +434,6 @@ ul {
   }
 }
 
-// Refactored
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -244,14 +457,12 @@ ul {
   }
 }
 
-// Refactored
 .sellers__cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 2rem 1rem;
 }
 
-// Refactored
 .picks {
   .picks__categories {
     display: flex;
@@ -308,6 +519,7 @@ ul {
     width: 294px;
     height: 53px;
     border: 2px solid #2f2f39;
+    overflow: hidden;
 
     .subscribe-input__input {
       background-color: transparent;
@@ -332,6 +544,10 @@ ul {
     gap: 1rem;
     justify-content: space-between;
 
+    .social-icon svg path {
+      fill: #fff;
+    }
+
     .social-icon {
       background: var(--icon-bg-color);
       border-radius: 0.5rem;
@@ -347,11 +563,11 @@ ul {
 }
 
 .scrolltop {
-  border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: var(--primary-text-color);
   position: fixed;
   bottom: 2.5rem;
   right: 2.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--primary-text-color);
+  border-radius: 50%;
 }

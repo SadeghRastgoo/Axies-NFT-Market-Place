@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
-    "get-eth-price": "^1.0.0",
     "typeit": "^8.3.1"
   }
 }

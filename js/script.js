@@ -8,6 +8,8 @@ const cardPlaceBidTxt = document.getElementsByClassName("place-bid__txt");
 const priceETH = document.getElementsByClassName("price__ETH");
 const priceUSD = document.getElementsByClassName("price__USD");
 const scrollTop = document.querySelector(".scrolltop");
+const headerEl = document.querySelector(".header");
+const searchIcon = document.querySelector(".functionalities__search");
 
 const likeClickCount = [];
 for (const [i] of Object.entries(cardLikeEls)) {
@@ -29,8 +31,8 @@ for (const [i] of Object.entries(cardPlaceBidBtns)) {
 }
 
 const countDownDates = [
-  new Date("Mar 12, 2022 15:37:25").getTime(),
-  new Date("Mar 11, 2022 11:11:55").getTime(),
+  new Date("Mar 17, 2022 15:37:25").getTime(),
+  new Date("Mar 15, 2022 11:11:55").getTime(),
   new Date("Mar 19, 2022 01:53:00").getTime(),
   new Date("Mar 21, 2022 09:00:00").getTime(),
   new Date("Mar 20, 2022 21:25:37").getTime(),
@@ -78,4 +80,41 @@ window.addEventListener("scroll", function () {
   } else {
     scrollTop.classList.add("hidden");
   }
+});
+
+window.addEventListener("scroll", function () {
+  let yAxis = window.scrollY;
+  if (yAxis >= 75) {
+    headerEl.classList.add("sticky-nav");
+  } else {
+    headerEl.classList.remove("sticky-nav");
+  }
+});
+
+function openSearch() {
+  document.querySelector(".searchbar").classList.remove("d-none");
+  document.querySelector(".blur-bg").classList.remove("d-none");
+}
+
+function closeSearch() {
+  document.querySelector(".searchbar").classList.add("d-none");
+  document.querySelector(".blur-bg").classList.add("d-none");
+}
+
+document.querySelector(".blur-bg").addEventListener("click", closeSearch);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeSearch();
+  } else if (e.ctrlKey && (e.key === "b" || e.key === "B")) {
+    openSearch();
+  }
+});
+
+searchIcon.addEventListener("click", openSearch);
+
+document.querySelector(".theme-light").addEventListener("click", function () {
+  document.querySelector("html").classList.add("light-mode-state");
+});
+document.querySelector(".theme-dark").addEventListener("click", function () {
+  document.querySelector("html").classList.remove("light-mode-state");
 });
