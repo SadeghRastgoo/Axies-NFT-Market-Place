@@ -49,14 +49,15 @@
     }
   }
 
+  .like-tag {
+    background: var(--primary-text-color);
+    color: #fff;
+  }
+
   .card {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 
-    .like-tag {
-      background: var(--primary-text-color);
-      color: #fff;
-    }
     .place-bid--active {
       background: #14141f !important;
     }
