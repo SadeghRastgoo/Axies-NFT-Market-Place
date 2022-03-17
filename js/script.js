@@ -113,8 +113,8 @@ document.addEventListener("keydown", function (e) {
 searchIcon.addEventListener("click", openSearch);
 
 document.querySelector(".theme-light").addEventListener("click", function () {
-  document.querySelector("html").classList.add("light-mode-state");
+  document.querySelector("body").classList.toggle("light-colors");
 });
 document.querySelector(".theme-dark").addEventListener("click", function () {
-  document.querySelector("html").classList.remove("light-mode-state");
+  document.querySelector("body").classList.toggle("light-colors");
 });
