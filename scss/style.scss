@@ -571,3 +571,52 @@ ul {
   background: var(--primary-text-color);
   border-radius: 50%;
 }
+
+.stickybar {
+  background-color: var(--icon-bg-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  & > * {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0rem;
+      height: 2.7rem;
+      background-color: var(--icon-bg-color);
+      box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
+      border-radius: 0 3rem 3rem 0;
+      transition: width 1s;
+    }
+  }
+  & > *:hover::after {
+    content: attr(data-content);
+    width: 8.5rem;
+  }
+  .social-icon {
+    transition: transform 1s;
+  }
+  & > *:hover > * {
+    transform: rotate(360deg);
+  }
+}
