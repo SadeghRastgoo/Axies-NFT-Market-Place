@@ -146,10 +146,18 @@ ul {
         float: left;
         border-radius: 5px;
 
+        .fa-angle-down {
+          transition: transform 0.5s;
+        }
+
         &:hover {
           background-color: var(--nav-color-1);
           ul {
             display: initial;
+          }
+
+          .fa-angle-down {
+            transform: rotate(180deg);
           }
         }
 
