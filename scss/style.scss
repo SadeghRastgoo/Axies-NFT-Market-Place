@@ -1,4 +1,4 @@
-@import "_color";
+@import "color";
 @import "component";
 @import "typography";
 @import "utilities";
@@ -18,44 +18,35 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .blur-bg {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   z-index: 99;
 }
+
 .searchbar {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  background-color: red;
-  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+  z-index: 99;
   background: #2e3034;
   border: 1px solid #3c3f40;
   border-radius: 1rem;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
 
   .searchbar__row {
     gap: 2rem;
     display: flex;
     color: #bebec0;
   }
-  .row-2 {
+  .searchbar__row-2 {
     justify-content: space-between;
     div {
       display: flex;
@@ -98,7 +89,7 @@ ul {
 }
 
 .header {
-  border-bottom: 2px solid #292933;
+  border-bottom: 2px solid var(--header-bt-border-color);
   padding: 0.75rem 0 0.5rem;
 
   .container {
@@ -132,6 +123,7 @@ ul {
 
     @media (max-width: 901px) {
       display: none;
+      max-width: 100%;
     }
 
     ul {
@@ -172,7 +164,7 @@ ul {
           li {
             width: 100%;
             &:hover {
-              background: #45426b;
+              background: var(--nav-inner-li-color);
             }
           }
         }
@@ -514,9 +506,19 @@ ul {
     flex-direction: column;
     gap: 2rem;
 
-    li:hover {
+    li {
+      position: relative;
+      left: -10px;
+      transition: left 0.25s;
       &::before {
         content: "- ";
+        opacity: 0;
+      }
+    }
+    li:hover {
+      left: 0px;
+      &::before {
+        opacity: 1;
       }
     }
   }
@@ -577,7 +579,19 @@ ul {
   width: 4.5rem;
   height: 4.5rem;
   background: var(--primary-text-color);
+  z-index: 99;
   border-radius: 50%;
+  svg {
+    position: relative;
+    top: 0;
+    transition: top 0.3s;
+  }
+
+  &:hover {
+    svg {
+      top: -3px;
+    }
+  }
 }
 
 .stickybar {

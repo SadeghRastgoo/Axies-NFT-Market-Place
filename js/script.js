@@ -112,9 +112,23 @@ document.addEventListener("keydown", function (e) {
 
 searchIcon.addEventListener("click", openSearch);
 
+const logoColorChanger = function (isLightTheme) {
+  if (isLightTheme) {
+    document.querySelector(".logo").src = "assets/img/01_header/logo_light.png";
+  } else {
+    document.querySelector(".logo").src = "assets/img/01_header/logo_dark.png";
+  }
+};
+
 document.querySelector(".theme-light").addEventListener("click", function () {
   document.querySelector("body").classList.toggle("light-colors");
+  logoColorChanger(
+    document.querySelector("body").classList.contains("light-colors")
+  );
 });
 document.querySelector(".theme-dark").addEventListener("click", function () {
   document.querySelector("body").classList.toggle("light-colors");
+  logoColorChanger(
+    document.querySelector("body").classList.contains("light-colors")
+  );
 });

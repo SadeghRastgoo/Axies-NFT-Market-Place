@@ -10,6 +10,8 @@
   --primary-color-2: #606067;
   --bg-black: #030303;
   --nav-color-1: #2c2c45;
+  --header-bt-border-color: #292933;
+  --nav-inner-li-color: #45426b;
 }
 
 .light-colors {
@@ -21,10 +23,20 @@
   --line-color: #bfbfec !important;
   --primary-color-2: #d8d8dc !important;
   --bg-black: #f3f3f3 !important;
-  --nav-color-1: #f1f0f0;
+  --nav-color-1: #f1f0f0 !important;
+  --header-bt-border-color: #c2c2c2;
+  --nav-inner-li-color: #d9d9d9;
 
   .theme-light {
     fill: var(--primary-text-color) !important;
+  }
+
+  .picks__categories svg path {
+    stroke: var(--primary-text-color);
+  }
+
+  .functionalities__search path {
+    stroke: var(--primary-text-color);
   }
 
   .btn--primary:hover {
