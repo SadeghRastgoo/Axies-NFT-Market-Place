@@ -11,6 +11,7 @@
   --indigo-4: #2c2c45;
   --indigo-5: #292933;
   --indigo-6: #45426b;
+  --indigo-7: #2e3034;
 
   --white-2: #fdfdfd;
   --gray: #919191;
@@ -34,6 +35,7 @@
   --nav-color-1: var(--indigo-4);
   --header-bt-border-color: var(--indigo-5);
   --nav-inner-li-color: var(--indigo-6);
+  --searchbar-bg-color: var(--indigo-7);
 }
 
 .light {
@@ -49,6 +51,7 @@
   --nav-color-1: var(--white-5);
   --header-bt-border-color: var(--gray-3);
   --nav-inner-li-color: var(--white-3);
+  --searchbar-bg-color: var(--white);
 
   .theme-light {
     fill: var(--primary-text-color) !important;

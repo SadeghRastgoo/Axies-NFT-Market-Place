@@ -33,7 +33,7 @@ body {
   width: 90%;
   max-width: 400px;
   z-index: 99;
-  background: #2e3034;
+  background: var(--searchbar-bg-color);
   border: 1px solid #3c3f40;
   border-radius: 1rem;
   padding: 1.75rem;
