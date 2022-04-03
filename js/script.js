@@ -32,19 +32,19 @@ for (const [i] of Object.entries(cardPlaceBidBtns)) {
 }
 
 const countDownDates = [
-  new Date("Mar 17, 2022 15:37:25").getTime(),
-  new Date("Mar 15, 2022 11:11:55").getTime(),
-  new Date("Mar 19, 2022 01:53:00").getTime(),
-  new Date("Mar 21, 2022 09:00:00").getTime(),
-  new Date("Mar 20, 2022 21:25:37").getTime(),
-  new Date("Mar 30, 2022 18:44:14").getTime(),
-  new Date("Mar 25, 2022 10:04:40").getTime(),
+  new Date("Apr 17, 2022 15:37:25").getTime(),
+  new Date("Apr 15, 2022 11:11:55").getTime(),
+  new Date("Apr 19, 2022 01:53:00").getTime(),
+  new Date("Apr 21, 2022 09:00:00").getTime(),
+  new Date("Apr 20, 2022 21:25:37").getTime(),
+  new Date("Apr 30, 2022 18:44:14").getTime(),
+  new Date("Apr 25, 2022 10:04:40").getTime(),
   new Date("Apr 16, 2022 13:31:05").getTime(),
-  new Date("Mar 25, 2022 18:44:30").getTime(),
-  new Date("Mar 5, 2022 20:14:20").getTime(),
-  new Date("Mar 19, 2022 01:53:00").getTime(),
-  new Date("Mar 21, 2022 09:00:00").getTime(),
-  new Date("Mar 20, 2022 21:25:37").getTime(),
+  new Date("Apr 25, 2022 18:44:30").getTime(),
+  new Date("Apr 5, 2022 20:14:20").getTime(),
+  new Date("Apr 19, 2022 01:53:00").getTime(),
+  new Date("Apr 21, 2022 09:00:00").getTime(),
+  new Date("Apr 20, 2022 21:25:37").getTime(),
 ];
 for (const [i] of Object.entries(timerPlaceholderEls)) {
   var cardTimer = setInterval(function () {
@@ -85,7 +85,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   let yAxis = window.scrollY;
-  if (yAxis >= 75) {
+  if (yAxis >= 70) {
     headerEl.classList.add("sticky-nav");
   } else {
     headerEl.classList.remove("sticky-nav");
