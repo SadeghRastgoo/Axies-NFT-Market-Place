@@ -1,31 +1,54 @@
 :root {
-  --primary-text-color: #fdfdfd;
-  --bg-color: #14141f;
-  --primary-color: #4e3fee;
-  // --primary-color-2: #5142fb;
-  --gray-color: #adadb0;
-  --icon-bg-color: #343444;
-  --bg-color-2: #0d0d12;
-  --line-color: #242431;
-  --primary-color-2: #606067;
-  --bg-black: #030303;
-  --nav-color-1: #2c2c45;
-  --header-bt-border-color: #292933;
-  --nav-inner-li-color: #45426b;
+  --white: #fcfcfc;
+  --indigo: #14141f;
+  --blue: #4e3fee;
+  --light-gray: #adadb0;
+  --indigo-2: #343444;
+  --black: #0d0d12;
+  --indigo-3: #242431;
+  --dark-gray: #606067;
+  --black-2: #030303;
+  --indigo-4: #2c2c45;
+  --indigo-5: #292933;
+  --indigo-6: #45426b;
+
+  --white-2: #fdfdfd;
+  --gray: #919191;
+  --gray-2: #9d9d9d;
+  --gray-3: #bfbfec;
+  --white-3: #d8d8dc;
+  --white-4: #f3f3f3;
+  --white-5: #f1f0f0;
 }
 
-.light-colors {
-  --bg-color: #fdfdfd !important;
-  --primary-text-color: #14141f !important;
-  --gray-color: #919191 !important;
-  --icon-bg-color: #fdfdfd !important;
-  --bg-color-2: #9d9d9d !important;
-  --line-color: #bfbfec !important;
-  --primary-color-2: #d8d8dc !important;
-  --bg-black: #f3f3f3 !important;
-  --nav-color-1: #f1f0f0 !important;
-  --header-bt-border-color: #c2c2c2;
-  --nav-inner-li-color: #d9d9d9;
+.dark {
+  --primary-text-color: var(--white);
+  --bg-color: var(--indigo);
+  --primary-color: var(--blue);
+  --gray-color: var(--light-gray);
+  --icon-bg-color: var(--indigo-2);
+  --bg-color-2: var(--black);
+  --line-color: var(--indigo-3);
+  --primary-color-2: var(--dark-gray);
+  --bg-black: var(--black-2);
+  --nav-color-1: var(--indigo-4);
+  --header-bt-border-color: var(--indigo-5);
+  --nav-inner-li-color: var(--indigo-6);
+}
+
+.light {
+  --primary-text-color: var(--indigo);
+  --bg-color: var(--white-2);
+  --primary-color: var(--blue);
+  --gray-color: var(--gray);
+  --icon-bg-color: var(--white-2);
+  --bg-color-2: var(--gray-2);
+  --line-color: var(--gray-3);
+  --primary-color-2: var(--white-3);
+  --bg-black: var(--white-4);
+  --nav-color-1: var(--white-5);
+  --header-bt-border-color: var(--gray-3);
+  --nav-inner-li-color: var(--white-3);
 
   .theme-light {
     fill: var(--primary-text-color) !important;

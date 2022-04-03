@@ -1,5 +1,6 @@
 "use strict";
 
+const bodyEl = document.querySelector("body");
 const cardLikeEls = document.getElementsByClassName("like-tag");
 const cardLikeHeartEls = document.getElementsByClassName("heart");
 const cardPlaceBidBtns = document.getElementsByClassName("card__place-bid");
@@ -120,15 +121,21 @@ const logoColorChanger = function (isLightTheme) {
   }
 };
 
+const theme = localStorage.getItem("theme");
+if (theme) {
+  bodyEl.classList.add(theme);
+  if (bodyEl.classList.contains("light")) {
+    logoColorChanger(true);
+  }
+}
+
 document.querySelector(".theme-light").addEventListener("click", function () {
-  document.querySelector("body").classList.toggle("light-colors");
-  logoColorChanger(
-    document.querySelector("body").classList.contains("light-colors")
-  );
+  bodyEl.classList.replace("dark", "light");
+  logoColorChanger(true);
+  localStorage.setItem("theme", "light");
 });
 document.querySelector(".theme-dark").addEventListener("click", function () {
-  document.querySelector("body").classList.toggle("light-colors");
-  logoColorChanger(
-    document.querySelector("body").classList.contains("light-colors")
-  );
+  bodyEl.classList.replace("light", "dark");
+  logoColorChanger(false);
+  localStorage.setItem("theme", "dark");
 });
