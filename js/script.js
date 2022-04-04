@@ -26,7 +26,11 @@ for (const [i] of Object.entries(cardLikeEls)) {
 
 for (const [i] of Object.entries(cardPlaceBidBtns)) {
   cardPlaceBidBtns[i].onclick = () => {
-    cardPlaceBidTxt[i].innerHTML = "Thanks";
+    document.URL.includes("index.html")
+      ? (cardPlaceBidTxt[i].innerHTML = "Thanks")
+      : (cardPlaceBidTxt[i].innerHTML =
+          "New NFT Item Has Been Added to Your Cart");
+
     cardPlaceBidBtns[i].classList.add("place-bid--active");
   };
 }

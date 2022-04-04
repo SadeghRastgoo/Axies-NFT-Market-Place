@@ -106,70 +106,9 @@
 
     .card__place-bid {
       opacity: 0;
-      transition: opacity 0.6s ease, box-shadow 0.5s;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      gap: 0.75rem;
-      width: 124px;
-      height: 40px;
-      background: var(--primary-text-color);
-      border-radius: 4rem;
-      color: var(--bg-color);
-      border: none;
-      outline: none;
-      overflow: hidden;
-
-      &:hover {
-        box-shadow: rgba(50, 50, 93, 0.3) 0px 2px 32px -2px,
-          rgba(0, 0, 0, 0.35) 0px 1px 25px -3px;
-      }
-    }
-
-    .place-bid__checkbox {
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      right: -40px;
-      opacity: 0;
-    }
-
-    .place-bid__checkbox svg {
-      width: 20px;
-      margin: 10px;
-    }
-
-    .place-bid__checkbox svg path {
-      stroke-width: 5;
-      stroke: #fff;
-      stroke-dasharray: 34;
-      stroke-dashoffset: 34;
-      stroke-linecap: round;
-    }
-
-    .place-bid--active {
-      background: var(--primary-color);
-      color: #fff;
-    }
-
-    .place-bid--active .place-bid__checkbox {
-      right: 0;
-      opacity: 1;
-      transition: 1s;
-    }
-
-    .place-bid--active p {
-      margin-right: 4rem;
-      transition: 1s;
-    }
-
-    .place-bid--active svg path {
-      stroke-dashoffset: 0;
-      transition: 0.6s;
-      transition-delay: 0.6s;
     }
 
     .card__timer {
@@ -243,6 +182,70 @@
       }
     }
   }
+}
+
+.card__place-bid {
+  transition: opacity 0.6s ease, box-shadow 0.5s;
+  gap: 0.75rem;
+  width: 124px;
+  height: 40px;
+  background: var(--primary-text-color);
+  border-radius: 4rem;
+  color: var(--bg-color);
+  border: none;
+  outline: none;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 2px 32px -2px,
+      rgba(0, 0, 0, 0.35) 0px 1px 25px -3px;
+  }
+}
+
+.place-bid__checkbox {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: -40px;
+  opacity: 0;
+}
+
+.place-bid__checkbox svg {
+  width: 20px;
+  margin: 10px;
+}
+
+.place-bid__checkbox svg path {
+  stroke-width: 5;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+
+.place-bid--active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.place-bid--active .place-bid__checkbox {
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+.place-bid--active p {
+  margin-right: 4rem;
+  transition: 1s;
+}
+
+.place-bid--active svg path {
+  stroke-dashoffset: 0;
+  transition: 0.6s;
+  transition-delay: 0.6s;
 }
 
 .creator-tag {
