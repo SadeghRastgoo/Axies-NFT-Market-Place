@@ -83,33 +83,42 @@
     }
   }
 
-  .item-owners-container {
+  .item-owners-container,
+  .item-specification-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+  }
 
-    .item-owners__item {
+  .item-owners__item {
+    display: flex;
+    gap: 1.15rem;
+    align-items: center;
+    background: var(--item-box-bg-color);
+    border-radius: 1.7rem;
+    padding: 0.9rem 1rem;
+
+    .item-owners__item-img {
+      border-radius: 1.7rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    .item-owners__item-txts {
       display: flex;
-      gap: 1.15rem;
-      align-items: center;
-      background: var(--item-box-bg-color);
-      border-radius: 1.75rem;
-      padding: 0.9rem 1rem;
-
-      .item-owners__item-img {
-        border-radius: 1.75rem;
-        width: 4.5rem;
-        height: 4.5rem;
-      }
-      .item-owners__item-txts {
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
-        padding-top: 3px;
-      }
+      flex-direction: column;
+      gap: 0.2rem;
+      padding-top: 3px;
     }
   }
 
-  .item-description {
+  .item-spec__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--item-box-bg-color);
+    border-radius: 1.7rem;
+    padding: 1.3rem 2.1rem 1.25rem;
+  }
+  .current-bid {
   }
 }
