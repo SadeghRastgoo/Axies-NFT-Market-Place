@@ -52,7 +52,7 @@
   .item__details {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 2rem;
   }
 
   .item-subheading-container {
@@ -81,5 +81,35 @@
         right: 1.6rem;
       }
     }
+  }
+
+  .item-owners-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    .item-owners__item {
+      display: flex;
+      gap: 1.15rem;
+      align-items: center;
+      background: var(--item-box-bg-color);
+      border-radius: 1.75rem;
+      padding: 0.9rem 1rem;
+
+      .item-owners__item-img {
+        border-radius: 1.75rem;
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+      .item-owners__item-txts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding-top: 3px;
+      }
+    }
+  }
+
+  .item-description {
   }
 }
