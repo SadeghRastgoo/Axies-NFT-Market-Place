@@ -22,6 +22,8 @@
   --white-5: #f1f0f0;
 
   --indigo-8: #383746;
+  --indigo-9: #262531;
+  --dark-gray-2: #26253166;
 }
 
 .dark {
@@ -38,8 +40,10 @@
   --header-bt-border-color: var(--indigo-5);
   --nav-inner-li-color: var(--indigo-6);
   --searchbar-bg-color: var(--indigo-7);
-
   --item-box-bg-color: var(--indigo-8);
+  --tabs-hr-color: var(--indigo-9);
+  --tabs-hr-color-2: var(--dark-gray-2);
+  --history-item-hover-color: rgba(0, 0, 0, 0.1);
 }
 
 .light {
@@ -56,6 +60,10 @@
   --header-bt-border-color: var(--gray-3);
   --nav-inner-li-color: var(--white-3);
   --searchbar-bg-color: var(--white);
+  --item-box-bg-color: var(--white-4);
+  --tabs-hr-color: var(--white-3);
+  --tabs-hr-color-2: var(--white-5);
+  --history-item-hover-color: rgba(0, 0, 0, 0.03);
 
   .theme-light {
     fill: var(--primary-text-color) !important;
@@ -78,6 +86,9 @@
 
   .feature__icon {
     color: var(--bg-color);
+  }
+
+  .item {
   }
 
   .footer {

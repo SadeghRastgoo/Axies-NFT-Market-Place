@@ -11,6 +11,7 @@ const priceUSD = document.getElementsByClassName("price__USD");
 const scrollTop = document.querySelector(".scrolltop");
 const headerEl = document.querySelector(".header");
 const searchIcon = document.querySelector(".functionalities__search");
+const heroEl = document.querySelector(".hero");
 
 const likeClickCount = [];
 for (const [i] of Object.entries(cardLikeEls)) {
@@ -130,16 +131,27 @@ if (theme) {
   bodyEl.classList.add(theme);
   if (bodyEl.classList.contains("light")) {
     logoColorChanger(true);
+    bodyEl.classList.remove("dark");
   }
+}
+
+if (document.URL.includes("item.html") && bodyEl.classList.contains("light")) {
+  heroEl.classList.add("hero--light");
 }
 
 document.querySelector(".theme-light").addEventListener("click", function () {
   bodyEl.classList.replace("dark", "light");
   logoColorChanger(true);
   localStorage.setItem("theme", "light");
+  if (document.URL.includes("item.html")) {
+    heroEl.classList.add("hero--light");
+  }
 });
 document.querySelector(".theme-dark").addEventListener("click", function () {
   bodyEl.classList.replace("light", "dark");
   logoColorChanger(false);
   localStorage.setItem("theme", "dark");
+  if (document.URL.includes("item.html")) {
+    heroEl.classList.remove("hero--light");
+  }
 });
