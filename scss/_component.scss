@@ -369,21 +369,7 @@
 
   .coll-card__details {
     display: flex;
-    gap: 0.75rem;
-    .coll-card__avatar {
-      width: 6rem;
-      height: 5.9rem;
-
-      img {
-        border-radius: 2rem;
-      }
-
-      .coll-card__verified-badge {
-        right: 0;
-        bottom: 0;
-        transition: transform 0.75s;
-      }
-    }
+    gap: 1rem;
 
     .coll-card__txts {
       display: flex;
@@ -395,6 +381,21 @@
       margin-left: auto;
       align-self: flex-start;
     }
+  }
+}
+
+.coll-card__avatar {
+  width: 6rem;
+  height: 5.9rem;
+
+  img {
+    border-radius: 2rem;
+  }
+
+  .coll-card__verified-badge {
+    right: 0;
+    bottom: 0;
+    transition: transform 0.75s;
   }
 }
 
