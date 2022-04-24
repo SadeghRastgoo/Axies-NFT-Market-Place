@@ -30,12 +30,18 @@
 .mt-1_5 {
   margin-top: 1.5rem;
 }
+.mt-1 {
+  margin-top: 1rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 .ml-auto {
   margin-left: auto;
+}
+.mb-4 {
+  margin-bottom: 4rem;
 }
 
 // --- Padding ---
@@ -52,6 +58,10 @@
 }
 .pb-2 {
   padding-bottom: 2rem;
+}
+.px-4 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 // --- Shadow ---

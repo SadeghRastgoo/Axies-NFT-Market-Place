@@ -27,7 +27,7 @@ for (const [i] of Object.entries(cardLikeEls)) {
 
 for (const [i] of Object.entries(cardPlaceBidBtns)) {
   cardPlaceBidBtns[i].onclick = () => {
-    !cardPlaceBidBtns[i].parentElement.classList.contains("card__img")
+    cardPlaceBidBtns[i].classList.contains("card__place-bid--style2")
       ? (cardPlaceBidTxt[i].innerHTML =
           "New NFT Item Has Been Added to Your Cart")
       : (cardPlaceBidTxt[i].innerHTML = "Thanks");
