@@ -24,10 +24,13 @@
   --indigo-8: #383746;
   --indigo-9: #262531;
   --dark-gray-2: #26253166;
+
+  --indigo-10: #3c3c4b;
 }
 
 .dark {
   --primary-text-color: var(--white);
+  --primary-text-color-reverse: var(--black);
   --bg-color: var(--indigo);
   --primary-color: var(--blue);
   --gray-color: var(--light-gray);
@@ -44,10 +47,13 @@
   --tabs-hr-color: var(--indigo-9);
   --tabs-hr-color-2: var(--dark-gray-2);
   --history-item-hover-color: rgba(0, 0, 0, 0.1);
+  --card-bg-color: var(--indigo-2);
+  --input-border-color: var(--indigo-10);
 }
 
 .light {
   --primary-text-color: var(--indigo);
+  --primary-text-color-reverse: var(--white);
   --bg-color: var(--white-2);
   --primary-color: var(--blue);
   --gray-color: var(--gray);
@@ -64,6 +70,8 @@
   --tabs-hr-color: var(--white-3);
   --tabs-hr-color-2: var(--white-5);
   --history-item-hover-color: rgba(0, 0, 0, 0.03);
+  --card-bg-color: var(--white-2);
+  --input-border-color: var(--gray-3);
 
   .theme-light {
     fill: var(--primary-text-color) !important;

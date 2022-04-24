@@ -134,7 +134,11 @@ if (theme) {
   }
 }
 
-if (document.URL.includes("item.html") && bodyEl.classList.contains("light")) {
+if (
+  (document.URL.includes("item.html") ||
+    document.URL.includes("profile.html")) &&
+  bodyEl.classList.contains("light")
+) {
   heroEl.classList.add("hero--light");
 }
 
@@ -142,7 +146,10 @@ document.querySelector(".theme-light").addEventListener("click", function () {
   bodyEl.classList.replace("dark", "light");
   logoColorChanger(true);
   localStorage.setItem("theme", "light");
-  if (document.URL.includes("item.html")) {
+  if (
+    document.URL.includes("item.html") ||
+    document.URL.includes("profile.html")
+  ) {
     heroEl.classList.add("hero--light");
   }
 });
@@ -150,7 +157,10 @@ document.querySelector(".theme-dark").addEventListener("click", function () {
   bodyEl.classList.replace("light", "dark");
   logoColorChanger(false);
   localStorage.setItem("theme", "dark");
-  if (document.URL.includes("item.html")) {
+  if (
+    document.URL.includes("item.html") ||
+    document.URL.includes("profile.html")
+  ) {
     heroEl.classList.remove("hero--light");
   }
 });

@@ -44,6 +44,15 @@
   display: grid;
   grid-template-columns: 300px auto;
   gap: 8rem;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 250px auto;
+    gap: 3rem;
+  }
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
 .profile__rt {
@@ -58,6 +67,7 @@
   width: initial;
   height: initial;
   min-width: initial !important;
+  background: var(--card-bg-color);
 
   .card__img {
     margin-bottom: 1rem;
@@ -73,12 +83,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px;
+  grid-auto-rows: 100px;
   gap: 1rem;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 
   & > div {
     border-radius: 0.75rem;
     overflow: hidden;
-    border: 2px solid #3c3c4b;
+    border: 2px solid var(--input-border-color);
     transition: border 0.3s;
   }
 
@@ -113,8 +128,8 @@
     transition: color 0.4s;
   }
   &:hover {
-    color: #000;
-    background-color: #fff;
+    color: var(--primary-text-color-reverse);
+    background-color: var(--primary-text-color);
 
     i {
       color: var(--primary-color);
@@ -127,6 +142,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content;
   gap: 3rem;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 
   .secondary-btn {
     width: max-content;
@@ -148,7 +167,7 @@
 
 .input-primary {
   border-radius: 0.8rem;
-  border: 2px solid #3c3c4b;
+  border: 2px solid var(--input-border-color);
   background: transparent;
   outline: none;
   padding: 1rem 1.5rem;
@@ -161,7 +180,7 @@
 
 .social-btn {
   background: #5142fb;
-  color: var(--primary-text-color);
+  color: var(--white);
   border: none;
   border-radius: 3rem;
   padding: 1rem 1rem 1rem 2.75rem;
