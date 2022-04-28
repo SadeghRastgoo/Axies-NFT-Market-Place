@@ -212,3 +212,29 @@
     }
   }
 }
+
+.changeable-bg {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+}
+
+.changeable-bg--1 {
+  background-image: url(../assets/img/08_profile/avatar.jpg);
+}
+.changeable-bg--2 {
+  border: 2px dashed var(--input-border-color) !important;
+}
+
+.changeable-bg--active {
+  border: 2px solid var(--input-border-color) !important;
+}
+
+.changeable-bg--1--placeholder {
+  background-image: url(../assets/img/08_profile/avatar-placeholder.jpg) !important;
+}
+
+#cover-input[type="file"],
+#profile-input[type="file"] {
+  display: none;
+}
