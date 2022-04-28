@@ -238,3 +238,8 @@
 #profile-input[type="file"] {
   display: none;
 }
+
+.choice-cover__upload {
+  display: flex;
+  flex-direction: column;
+}
