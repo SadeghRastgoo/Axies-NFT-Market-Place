@@ -51,7 +51,6 @@
   }
   @media screen and (max-width: 650px) {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 }
 
@@ -82,7 +81,7 @@
 .choice-cover-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px;
+  grid-template-rows: 120px;
   grid-auto-rows: 100px;
   gap: 1rem;
 
