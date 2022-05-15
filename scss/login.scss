@@ -223,13 +223,14 @@ input:-webkit-autofill {
 .login__input-container {
   display: grid;
   gap: 1rem;
-  padding: 1.2rem;
   grid-template-columns: 15px 1fr;
   border: 2px solid #234762;
   border-radius: 7px;
   align-items: center;
+  padding-left: 1.2rem;
 
   input {
+    padding: 1.2rem 1.2rem 1.2rem 0;
     background-color: transparent;
     border: none;
     outline: none;
@@ -322,7 +323,7 @@ input:-webkit-autofill {
     top: 0px;
     left: 0;
     z-index: -1;
-    transition: 1s;
+    transition: 0.75s;
   }
 
   span::after {
@@ -339,7 +340,7 @@ input:-webkit-autofill {
     -webkit-background-clip: text;
     top: 0px;
     left: 0px;
-    transition: 1s;
+    transition: 0.75s;
   }
 
   .login__banner-pattern-2 {
@@ -362,7 +363,8 @@ input:-webkit-autofill {
       left: -5px;
     }
     .login__banner-img {
-      transform: scale(1.05) translateY(-4px) translateX(3px);
+      transform: scale(1.05) translateY(-4px);
+      border-radius: 2.25rem;
     }
     .login__banner-pattern-2 {
       height: 160px;
